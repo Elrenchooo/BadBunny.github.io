@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Lexend+Giga:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@400;500;600;700;800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #d1e4dd;
+    overflow: hidden;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 20px;
+}
+
+label{
+    cursor: pointer;
+    display: none;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(235, 120, 139);
+
+    margin: 20px auto;
+}
+
+h2:hover{
+    scale: 1.1;
+    color: rgb(253, 149, 166);
+    cursor: pointer;
+}
+
+.container{
+    margin: 5px auto;
+    padding: 5px 0;
+}
+
+.logo{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(235, 120, 139);
+    transition: scale .2 ease;
+}
+
+.logo:hover{
+    color: rgb(253, 149, 166);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+nav a{
+    margin: 0 15px;
+    color: rgb(235, 120, 139);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: rgb(253, 149, 166);
+}
+
+h4{
+    text-transform: uppercase;
+}
+
+audio{
+    height: 50px;
+    width: 320px;
+}
+
+.audio1{
+    filter: drop-shadow(4px 5px 6px #ff45456b);
+}
+
+.audio2{
+    filter: drop-shadow(4px 5px 6px #fbff006b);
+}
+
+.audio3{
+    filter: drop-shadow(4px 5px 6px #00ff9977);
+}
+
+.audio4{
+    filter: drop-shadow(4px 5px 6px #006aff67);
+}
+
+.audio5{
+    filter: drop-shadow(4px 5px 6px #ff009567);
+}
+
+.card{
+    
+    margin: 1px auto;
+    width: 410px;
+    height: 400px;
+
+    text-align: center;
+
+    padding: 2em;
+    background: #d1e4dd;
+    border-radius: 12px;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after, .card::before{
+    content:"";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 57%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 12px;
+    z-index: -1;
+    animation: 4s spin linear infinite;
+
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    width: 410px; 
+    height: 400px;  
+    padding: 3px;
+}
+
+.card::before{
+    filter: blur(1.5rem);
+    opacity: 1.2;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+@media screen and (max-width: 991px) {  
+    body{
+        height: 100dvh;
+        width: 100%;
+    }
+    .nav{
+        padding: 30px;
+    }
+    label{
+        display: initial;
+    }
+
+    nav{
+        position: absolute;
+        top: 10%;
+        left: 0;
+        right: 0;
+        background-color: #b8cac4;
+        display: none;
+    }
+    nav a{
+        width: 100%;
+    }
+    #menu:checked ~ nav{
+        display: initial;
+    }
+    nav a{
+        margin: 0 5px;
+        font-size: .85rem;
+    }
+
+    .card{
+        width: 90%;
+        max-width: 410px;
+        height: auto;
+    }
+    audio{
+        height: 50px;
+        width: 300px;
+    }
+    .card::before, .card::after {
+    width: 350px;
+    height: 379px;
+    top: 46.45%;
+    left: 50%; 
+    translate: -50% -50%;
+    }
+}

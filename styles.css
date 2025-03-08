@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Lexend+Giga:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@400;500;600;700;800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(235, 120, 139);
+    cursor: pointer;
+}
+
+h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+}
+
+span{
+    font-weight: bold;
+    font-style: italic;
+}
+
+body{
+    height: 100dvh;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #d1e4dd;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 20px;
+}
+
+label{
+    cursor: pointer;
+    display: none;
+}
+
+.container{
+    margin: 5px auto;
+    padding: 5px 0;
+}
+
+.logo{
+    font-size: 1.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(235, 120, 139);
+    transition: scale .2 ease;
+}
+
+.logo:hover{
+    color: rgb(253, 149, 166);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+nav a{
+    margin: 0 15px;
+    color: rgb(235, 120, 139);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: rgb(253, 149, 166);
+}
+
+.header-content{
+    min-height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-radius: 15px;
+    animation: glow 20s infinite;
+
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 8px;
+
+    color: rgb(235, 120, 139);
+    font-size: 1.15rem;
+}
+@keyframes glow {
+    0%{box-shadow: 0 0 13px rgb(253, 14, 14);}
+    10% { box-shadow: 0 0 11px rgb(255, 123, 47); }
+    20% { box-shadow: 0 0 13px rgba(241, 255, 42, 0.747); }
+    30% { box-shadow: 0 0 11px rgb(66, 255, 161); }
+    40% { box-shadow: 0 0 14px rgb(17, 255, 223); }
+    50% { box-shadow: 0 0 14px rgb(9, 144, 255); }
+    60% { box-shadow: 0 0 11px rgb(187, 39, 255); }
+    70% { box-shadow: 0 0 13px rgb(204, 0, 255); }
+    80% { box-shadow: 0 0 15px rgb(248, 37, 255); }
+    90% { box-shadow: 0 0 13px rgb(255, 25, 167); }
+    100% { box-shadow: 0 0 11px rgb(253, 10, 124); }
+}
+
+.btn{
+    margin: 5px;
+    padding: 6px;
+    font-size: 1.05rem;
+    border-radius: 12px;
+    background-color: #dbff58;
+    color: rgb(28, 28, 255);
+}
+
+.btn:hover{
+    scale: 1.1;
+    color:rgb(49, 49, 255);
+    background-color: #d5fd44;
+}
+
+.fondo{
+    background-image: url(img/background.png);
+    min-height: 75vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+#comienzo, #discografía, #premios, #giras, footer{
+    margin: 5px;
+}
+
+#comienzo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#comienzo p{
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+}
+
+audio{
+    filter: drop-shadow(4px 5px 8px rgba(0,0,0,0.25));
+    width: 55%;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center; 
+
+    margin: 10px 0 12px 0;
+}
+
+.comienzo-content2{
+    margin: 10px 0;
+    background-image: url(img/biografia.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#discografía{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    min-height: 60vh;
+}
+
+.discografia-content2{
+    background-image: url(img/discografia.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, #fd0a7c,#ff19a7,#f825ff); 
+}
+
+.list{
+    margin: 10px;
+    letter-spacing: 2px;
+}
+
+.premios-content{
+    display: flex;
+}
+
+.logros{
+    margin: 15px 2px;
+    
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+}
+
+.imagen{
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.imagen img{
+    max-width: 95%;
+    min-height: 350px;
+    margin: 10px 5px;
+    border-radius: 10px;
+}
+
+.list2{
+    margin: 10px;
+    letter-spacing: 1.5px;
+}
+
+.giras{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.giras-content{
+    letter-spacing: 1.5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.giras-content2{
+    display: flex;
+}
+
+.giras-content2 img{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2px;
+    padding-right: 20px;
+}
+
+.hr{
+    display: none;
+}
+
+footer{
+    margin: 0;
+    background-color: #b8cac4;
+    font-weight: 600;
+    text-align: end;
+    font-size: .9rem;
+}
+
+@media screen and (max-width: 991px) {  
+    body{
+        height: 100dvh;
+        width: 100dvw;
+    }
+    .nav{
+        padding: 30px;
+    }
+    label{
+        display: initial;
+    }
+
+    nav{
+        position: absolute;
+        top: 10%;
+        left: 0;
+        right: 0;
+        background-color: #b8cac4;
+        display: none;
+    }
+    nav a{
+        width: 100%;
+    }
+    #menu:checked ~ nav{
+        display: initial;
+    }
+    nav a{
+        margin: 0 5px;
+        font-size: .85rem;
+    }
+
+    .logo{
+        font-size: 1.65rem;
+    }
+    h1{
+        font-size: 1.9rem;
+    }
+    .text{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    }
+    h2{
+        font-size: 1.75rem;
+    }
+    .btn{
+        margin: 6px;
+        padding: 4px;
+        font-size: .8rem;
+    }
+
+    .header-content{
+        min-height: 70dvh;
+        border-radius: 15px;
+        animation: glow 20s infinite;
+
+        background-image: url(img/background.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 12px 4px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .fondo{
+        display: none;
+    }
+
+    #comienzo, #discografía, #premios, #giras, footer{
+        margin: 2px 5px;
+    }
+
+    #comienzo{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .comienzo-content2 {
+        background-image: url(img/biografia.jpg);
+        height: 220px;
+        width: 100%;
+
+        border-radius: 15px;
+        animation: glow 20s infinite;
+    }
+    audio{
+        filter: drop-shadow(5px 7px 10px rgba(0, 0, 0, 0.548));
+        width: 80%;
+    }
+
+    #discografía{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .discografia-content2{
+        height: 230px;
+        border-radius: 15px;
+        animation: glow 20s infinite;
+    }
+
+    .premios-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .logros{
+        width: 100%;
+    }
+    .imagen{
+        text-align: center;
+        width: 100%;
+        height: 350px;
+        margin-bottom: 15px;
+
+        background-image: url(img/premios.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        border-radius: 15px;
+        animation: glow 20s infinite;
+    }
+    .imagen img{
+        display: none;
+    }
+
+    .giras {
+        display: flex; 
+        align-items: center;
+        flex-direction: column;
+    }
+    .giras-content{
+        padding: 10px;
+    }
+    .giras-content2 img {
+        width: 160px;
+        height: 125px;
+        border-radius: 15px;
+    }
+    .hr{
+        display: initial;
+    }
+    .imagenes{
+        width: 94%;
+        border-radius: 15px;
+        animation: glow 20s infinite;
+    }
+}
